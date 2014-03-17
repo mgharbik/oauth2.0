@@ -1,5 +1,6 @@
 module V1
 	class SecretAPI < Base
+		guard_all!  # Requires a valid OAuth 2 Access Token to use all Endpoints
 		namespace "secret"
 
 		get "secret1" do

@@ -7,6 +7,7 @@ module V1
 		end
 
 		get "secret" do
+			guard! # Requires a valid OAuth 2 Access Token to use this Endpoint
 			{ :secret => "only smart guys can see this ;)" }
 		end
 	end
