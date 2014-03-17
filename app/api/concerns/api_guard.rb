@@ -24,6 +24,10 @@
 	        request.env[Rack::OAuth2::Server::Resource::ACCESS_TOKEN]
  	    end
 
+ 	    def find_access_token(token_string)
+ 	    	# Convert Token String to Instance
+ 	      	Doorkeeper::AccessToken.authenticate(token_string)
+     	end
     end
  
     module ClassMethods
