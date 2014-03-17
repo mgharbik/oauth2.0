@@ -6,11 +6,14 @@ gem 'rails', '4.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
-# Devise for authentication
+# Devise for the resource owber business logic (User)
 gem 'devise'
 
-# Grap 
+# Grape for the resource server (API)
 gem 'grape'
+
+# Doorkeeper for the authorization server (Provider)
+gem "doorkeeper"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
