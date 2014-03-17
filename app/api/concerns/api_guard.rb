@@ -28,6 +28,11 @@
  	    	# Convert Token String to Instance
  	      	Doorkeeper::AccessToken.authenticate(token_string)
      	end
+
+     	def validate_access_token(access_token, scopes)
+     		# verify Access Token
+        	Oauth2::AccessTokenValidationService.validate(access_token, scopes: scopes)
+ 	    end
     end
  
     module ClassMethods
