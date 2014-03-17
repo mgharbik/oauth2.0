@@ -2,9 +2,10 @@ ByewalletApi::Application.routes.draw do
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  get "/pages/:action", :controller => :pages
+  mount ApplicationAPI => '/myapi'
 
-  get 'pages/home'
-  get 'pages/secret'
+  mount API::Base => '/api'
   # You can have the root of your site routed with "root"
   root 'pages#home'
 

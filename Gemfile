@@ -9,6 +9,9 @@ gem 'sqlite3'
 # Devise for authentication
 gem 'devise'
 
+# Grap 
+gem 'grape'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
