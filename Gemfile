@@ -15,6 +15,9 @@ gem 'grape'
 # Doorkeeper for the authorization server (Provider)
 gem "doorkeeper"
 
+# OAuth 2 Guard on Resource Server
+gem "rack-oauth2"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
