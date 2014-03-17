@@ -66,6 +66,10 @@
 	        end
         end
 
+        def current_user
+  	    	@current_user
+ 	    end
+
     	private
 		def get_token_string
 	        # The token was stored after the authenticator was invoked.
@@ -86,6 +90,19 @@
  
     module ClassMethods
 
+    	# Installs the doorkeeper guard on the whole Grape API endpoint.
+        #
+        # Arguments:
+        #
+        #   scopes: (optional) scopes required for this guard.
+        #           Defaults to empty array.
+        #
+        def guard_all!(scopes: [])
+        	before do
+        		guard! scopes: scopes
+        	end
+        end
+ 
     	private
         def install_error_responders(base)
         	error_classes = [ MissingTokenError, TokenNotFoundError,
