@@ -4,6 +4,7 @@ ByewalletApi::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   get 'pages/home'
+  get 'pages/secret'
   # You can have the root of your site routed with "root"
   root 'pages#home'
 
